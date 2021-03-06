@@ -12,7 +12,7 @@
 
         <!-- Header -->
             <header id="header">
-                <a class="logo" href="index.html">Fire Safety Products Catalogue</a>
+                <a class="logo" href="/">Fire Safety Products Catalogue</a>
                 <nav>
                     <a href="#menu">Menu</a>
                 </nav>
@@ -21,9 +21,10 @@
         <!-- Nav -->
             <nav id="menu">
                 <ul class="links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="elements.html">About</a></li>
-                    <li><a href="generic.html">Contact Us</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/aboutUs">About</a></li>
+                    <li><a href="/contactUs">Contact Us</a></li>
+                    <li><a href="/team">Team</a></li>
                 </ul>
             </nav>
 
