@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
+Route::get('/welcome', function () {
+    return view('welcome');
 });
 
 Route::get('/contactUs', function () {
@@ -32,3 +32,11 @@ Route::get('/aboutUs', function () {
 Route::get('/team', function () {
     return view('team');
 });
+
+Route::get('/products', function () {
+    return view('product/products');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
