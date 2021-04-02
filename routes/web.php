@@ -33,18 +33,22 @@ Route::get('/team', function () {
     return view('team');
 });
 
-Route::get('/products', function () {
-    return view('product/products');
-});
 
 Auth::routes();
 
+Route::resource('product','App\Http\Controllers\ProductsController');
+
+Route::get('/products', function () {
+    return view('product/products');
+})->name('product.products');
+
+ 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/productDetails', function () {
     return view('product/productDetails');
 });
 
-Route::get('/addProduct', function () {
-    return view('product/addProduct');
+Route::get('/addproduct', function () {
+    return view('product/addproduct');
 });

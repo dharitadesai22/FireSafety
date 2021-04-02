@@ -43,7 +43,7 @@
     <!-- Highlights -->
     <section class="wrapper">
         <div class="inner">
-            <button><a href="/addProduct">Add Product</a></button>
+            <button><a href="/addproduct">Add Product</a></button>
             <header class="special">
                 <h2>Our Products</h2>
                 <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>

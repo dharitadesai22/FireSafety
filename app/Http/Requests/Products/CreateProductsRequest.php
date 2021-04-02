@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Products;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -13,7 +13,7 @@ class CreateProductsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class CreateProductsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'p_name'=>'required',
+            'p_desc'=>'required',
+            'image'=>'required|image|mimes:jpeg,jpg,png,gif|max:3000'            
         ];
     }
 }

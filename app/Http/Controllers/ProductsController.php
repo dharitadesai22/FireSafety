@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Products;
 use Illuminate\Http\Request;
-use App\Http\Requests\Donations\CreateProductsRequest;
+use App\Http\Requests\Products\CreateProductsRequest;
 
 class ProductsController extends Controller
 {
@@ -39,7 +39,7 @@ class ProductsController extends Controller
     {
         // dd($request);
         // dd($request->category[0]);
-        $image = $request->file('image')->store('product');
+        $image = $request->file('image')->store('products');
         // dd($image);
 
         $product = Products::create([
@@ -49,7 +49,9 @@ class ProductsController extends Controller
             // 'status'=>'pending'
         ]);
 
-        return redirect(route('product.products'));
+       //return view('product/products');
+        //return redirect(route('product.products'));
+        return redirect()->route('product.products');
     }
     
     /**
