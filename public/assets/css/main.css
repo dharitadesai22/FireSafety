@@ -2392,7 +2392,7 @@ body {
   padding-top: 3.25rem; }
   body:before {
     content: ' ';
-    background-image: url(../../images/bg.jpg);
+    /* background-image: url(../../images/bg.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -2819,4 +2819,5 @@ body.is-menu-visible #menu {
   -ms-transform: translateX(0);
   transform: translateX(0);
   box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
-  visibility: visible; }
+  visibility: visible; 
+}
