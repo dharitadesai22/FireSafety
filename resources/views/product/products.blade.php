@@ -49,15 +49,17 @@
                 <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
             </header>
             <div class="highlights">
+            @foreach($product as $data) 
                 <section>
                     <div class="content">
                         <header>
-                            <a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
-                            <h3>Feugiat consequat</h3>
+                            <img src="{{asset('storage/'.$data->image)}}" alt="" style="width: 40px; height: 40px;"/> 
+                            <h3>{{$data->p_name}}</h3>
                         </header>
-                        <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+                        <p>{{$data->p_desc}}</p>
                     </div>
                 </section>
+            @endforeach
             </div>
         </div>
     </section>
