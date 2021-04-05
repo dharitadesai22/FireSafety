@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <title>Fire Safety Products Catalogue</title>
     <meta charset="utf-8" />
@@ -49,9 +48,9 @@
                 <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
             </header>
             <div class="highlights">
-            @foreach($product as $data) 
+            @foreach($products as $data) 
                 <section>
-                    <div class="content">
+                    <div class="content border border-primary">
                         <header>
                             <img src="{{asset('storage/'.$data->image)}}" alt="" style="width: 40px; height: 40px;"/> 
                             <h3>{{$data->p_name}}</h3>

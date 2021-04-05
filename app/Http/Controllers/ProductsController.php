@@ -12,7 +12,9 @@ class ProductsController extends Controller
     public function index()
     {
       //  $products = DB::select('select * from products');
-        return view('product.addproduct' );
+      $products = Products::all();
+        //dd($products);
+        return view('product.products',compact(['products']));
     }
 
     public function create()
@@ -24,13 +26,12 @@ class ProductsController extends Controller
     public function store(CreateProductsRequest $request)
     {
         $image = $request->file('image')->store('products');
-       
-
         $product = Products::create([
             'p_name'=>$request->p_name,
             'p_desc'=>$request->p_desc,
             'image'=>$image
         ]);
+       // $products = DB::select('select * from products');
 
         return redirect()->route('product.products');
     }

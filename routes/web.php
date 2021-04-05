@@ -36,13 +36,13 @@ Route::get('/team', function () {
 
 Auth::routes();
 
-Route::resource('product','App\Http\Controllers\ProductsController');
+//Route::resource('product','App\Http\Controllers\ProductsController');
+Route::post('/store', [App\Http\Controllers\ProductsController::class, 'store'])->name('product.store');
+Route::get('/products', [App\Http\Controllers\ProductsController::class, 'index'])->name('product.products');
+// Route::get('/products', function () {
+ //   return view('product/products');
+// })->name('product.products');
 
-Route::get('/products', function () {
-    return view('product/products');
-})->name('product.products');
-
- 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/productDetails', function () {
