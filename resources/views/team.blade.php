@@ -21,13 +21,14 @@
 
     <!-- Nav -->
     <nav id="menu">
-        <ul class="links">
-            <li><a href="/home">Home</a></li>
-            <li><a href="/aboutUs">About</a></li>
-            <li><a href="/contactUs">Contact Us</a></li>
-            <li><a href="#">Team</a></li>
-        </ul>
-    </nav>
+                <ul class="links">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/aboutUs">About</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/contactUs">Contact Us</a></li>
+                    <li><a href="/team">Team</a></li>
+                </ul>
+            </nav>
 
     <!-- Body -->
     <h2>Our Team</h2>
@@ -45,7 +46,8 @@
             <img src="#">
         </div>
     </div>
-
+    <!-- Footer -->
+        @extends('footer')
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>

@@ -47,7 +47,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('product/{id}','App\Http\Controllers\ProductsController@show')->name('product.show');
 
 Route::get('/productDetails', function () {
-    return view('product/productDetails');
+   return view('product/productDetails');
 })->name('productDetails');
 
 Route::get('/addproduct', function () {
