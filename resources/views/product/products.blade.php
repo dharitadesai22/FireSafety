@@ -56,6 +56,7 @@
                             <h3>{{$data->p_name}}</h3>
                         </header>
                         <p>{{$data->p_desc}}</p>
+                        <a href="{{route('product.show', $data->id)}}" class="button" style="height: 40px; width: 80px; padding: 0px; line-height: 2.50em;">View More</a>
                     </div>
                 </section>
             @endforeach

@@ -44,10 +44,11 @@ Route::get('/products', [App\Http\Controllers\ProductsController::class, 'index'
 // })->name('product.products');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('product/{id}','App\Http\Controllers\ProductsController@show')->name('product.show');
 
 Route::get('/productDetails', function () {
     return view('product/productDetails');
-});
+})->name('productDetails');
 
 Route::get('/addproduct', function () {
     return view('product/addproduct');

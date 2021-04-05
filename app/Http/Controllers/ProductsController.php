@@ -37,9 +37,16 @@ class ProductsController extends Controller
     }
     
 
-    public function show(Products $product)
+    public function show($id)
     {
-        
+        $productDetails = Products::where('id', $id)->get();
+        $productDetails = $productDetails[0];
+        // dd($details);
+
+        return view('product.productDetails',compact([
+            'productDetails'
+        ]));
+
       
     }
 
